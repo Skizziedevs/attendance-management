@@ -8,9 +8,11 @@
         <h1 class="text-xl text-indigo-600 font-semibold tracking-wide">Attendance App</h1>
       </div>
 
+      <!-- Show logout only if logged in -->
       <button
+        v-if="authStore.token"
         @click="logout"
-        class="bg-indigo-600 font-medium px-4 py-2 rounded-md hover:bg-gray-100 transition"
+        class="bg-indigo-600 font-medium px-4 py-2 rounded-md hover:bg-gray-300 hover:text-indigo-600 transition"
       >
         Logout
       </button>
@@ -20,19 +22,22 @@
 
 <script setup>
 import { useRouter } from 'vue-router'
+import { useAuthStore } from '../store/auth' // adjust path if needed
+import { onMounted } from 'vue'
+
 const router = useRouter()
+const authStore = useAuthStore()
+
+onMounted(() => {
+  authStore.persist() // load token + user from localStorage if available
+})
 
 const logout = () => {
-  localStorage.removeItem('token')
+  authStore.logout()
   router.push('/login')
 }
 </script>
 
 <style scoped>
-.bg-primary {
-  @apply bg-blue-600;
-}
-.text-primary {
-  @apply text-blue-600;
-}
+
 </style>
