@@ -13,6 +13,10 @@
 <script setup>
 import { useRoute } from 'vue-router'
 import Navbar from './components/Navbar.vue'
+// hydrate from localStorage if there is something
+import { useAuthStore } from './store/auth'
+const authStore = useAuthStore()
+authStore.persist()
 
 // Hide navbar on specific routes (e.g., /login)
 const route = useRoute()
