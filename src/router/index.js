@@ -9,10 +9,12 @@ import AttendanceList from '../pages/AttendanceList.vue'
 import UserAttendance from '../pages/UserAttendance.vue'
 import LeaveRequests from '../pages/LeaveRequests.vue'
 import EmployeeList from '../pages/EmployeeList.vue'
+
+import HomePage from '../pages/HomePage.vue'
 import EmployeeAttendance from '../pages/EmployeeAttendance.vue'
 
 const routes = [
-  { path: '/', redirect: '/login' },
+
   { path: '/login', component: LoginPage },
   { path: '/register', component: RegisterPage },
   { path: '/dashboard', component: EmployeeDashboard },
@@ -24,6 +26,7 @@ const routes = [
   { path: '/admin/employee/:userId/attendance', component: EmployeeAttendance },
   { path: '/admin/leaves', component: LeaveRequests },
   { path: '/admin/employees', component: EmployeeList },
+    { path: '/', component: HomePage },
 ]
 
 const router = createRouter({
