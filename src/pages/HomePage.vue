@@ -27,7 +27,7 @@
         <!-- Right Image Area -->
         <div class="md:w-1/2 flex justify-center md:justify-end">
           <img
-            src="https://placehold.co/600x400/E0E7FF/4338CA?text=Modern+Workplace"
+            src="../assets/images/Gemini_Generated_Image_3mb51r3mb51r3mb5.png"
             alt="People working with attendance system on a phone"
             class="rounded-xl shadow-2xl max-w-full h-auto"
             onerror="this.onerror=null; this.src='https://placehold.co/600x400/E0E7FF/4338CA?text=Image+Placeholder';"

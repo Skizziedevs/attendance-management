@@ -86,19 +86,19 @@
 
     <!-- Mobile Menu -->
     <div v-if="isMenuOpen" class="md:hidden mt-4 space-y-2 px-2 pb-3">
-      <a
+      <a  v-if="route.path === '/'"
         href="#features"
         @click="scrollAndCloseMenu"
         class="block text-gray-600 hover:text-indigo-600 font-medium transition duration-300 py-2 px-3 rounded-md hover:bg-gray-50"
         >Features</a
       >
-      <a
+      <a  v-if="route.path === '/'"
         href="#testimonials"
         @click="scrollAndCloseMenu"
         class="block text-gray-600 hover:text-indigo-600 font-medium transition duration-300 py-2 px-3 rounded-md hover:bg-gray-50"
         >Testimonials</a
       >
-      <a
+      <a  v-if="route.path === '/'"
         href="#contact"
         @click="scrollAndCloseMenu"
         class="block text-gray-600 hover:text-indigo-600 font-medium transition duration-300 py-2 px-3 rounded-md hover:bg-gray-50"
